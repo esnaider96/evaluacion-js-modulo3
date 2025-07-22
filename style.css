@@ -1,0 +1,188 @@
+/* 
+  Estilos 100% criollos de nuestro país - por Esnaider Monterrosa.
+  Me inspiré en los colores de nuestra Venezuela:
+  Amarillo como el maíz de nuestras arepas.
+  Azul como nuestro cielo.
+  Rojo como nuestro Cardenalito venezolano.
+*/
+
+/* Las variables de colores venezolanos que utilizo: */
+:root {
+    --color-maiz: #F9C846;    /* Amarillo de las arepas. */
+    --color-cielo: #2A7FBF;   /* Azul de nuestros cielos. */
+    --color-cardenalito: #D93A2B;  /* Rojo de nuestro Cardenalito venezolano. */
+    --color-texto: #333333;   /* Café como el café marroncito. */
+    --color-fondo: #F5F5F5;   /* Fondo suave. */
+}
+
+/* Reset criollo, para empezar de buena manera: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos generales del cuerpo: */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: 20px;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(249, 200, 70, 0.1),
+        rgba(42, 127, 191, 0.1)
+    );
+}
+
+/* Contenedor principal: */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-maiz);
+}
+
+/* Título principal: */
+h1 {
+    color: var(--color-maiz);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--color-cielo);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Imagen la Arepa es de Venezuela */
+.imagen-laArepaesdeVenezuela {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 3px solid var(--color-cardenalito);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.imagen-laArepaesdeVenezuela:hover {
+    transform: scale(1.02);
+}
+
+/* Formulario: */
+.formulario {
+    background-color: rgba(42, 127, 191, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 5px solid var(--color-maiz);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--color-cielo);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid var(--color-maiz);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-cardenalito);
+    box-shadow: 0 0 5px rgba(217, 58, 43, 0.3);
+}
+
+/* Botón: */
+button {
+    background-color: var(--color-maiz);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--color-cielo);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* El mensajes de resultado: */
+.mensaje {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#resultado {
+    background-color: rgba(70, 162, 249, 0.2);
+    border-left: 5px solid var(--color-cielo);
+}
+
+#contador {
+    background-color: rgba(224, 51, 39, 0.2);
+    border-left: 5px solid var(--color-cardenalito);
+}
+
+/* Cálida descripción del saludo: */
+.descripción {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: rgba(243, 208, 7, 0.1);
+    border-radius: 8px;
+    border-left: 5px solid var(--color-maiz);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Efectos responsives, para que se vea lo mejor posible en cualquier dispositivo: */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .formulario {
+        padding: 15px;
+    }
+}
